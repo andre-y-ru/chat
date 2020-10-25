@@ -1,0 +1,116 @@
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+html,
+body,
+iframe {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  
+  border: 0;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  min-width: 100%;
+  min-height: 100%;
+  
+  overflow: hidden;
+}
+
+.panel {
+  position: fixed;
+  top: 0;
+  right: 0;
+  
+  padding: 10px 15px;
+
+  background: #fff;
+  border-radius: 0 0 0 5px;
+  border: 1px solid rgba(100, 100, 100, .3);
+  border-width: 0 0 1px 1px;
+  
+  font-size: 14px;
+  font-family: Verdana, Tahoma, Arial, Helvetica, sans-serif;
+}
+
+.panel_on-air {
+  text-align: center;
+}
+
+.panel_on-air .timer__time {
+  display: none;
+}
+
+.panel_offline {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  
+  left: 0;
+  bottom: 0;
+  
+  border: 0;
+  
+  font-size: 1.5em;
+  font-size: calc(125% + .25vh);
+}
+
+.play-stream {
+    display: inline-block;
+    
+    vertical-align: middle;
+    width: 25px;
+    height: 25px;
+    margin-right: 5px;
+    
+    background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMCIgaGVpZ2h0PSIyMCIgdmlld0JveD0iMCAwIDIwIDIwIj4NCgk8cGF0aCBpZD0icGF1c2UiIGZpbGw9IiMzMTljZTEiIGZpbGwtcnVsZT0iZXZlbm9kZCIgZD0iTTcgMTRoMlY2SDd2OHptMy0xNEM0LjUgMCAwIDQuNSAwIDEwczQuNSAxMCAxMCAxMCAxMC00LjUgMTAtMTBTMTUuNSAwIDEwIDB6bTAgMThjLTQuNCAwLTgtMy42LTgtOHMzLjYtOCA4LTggOCAzLjYgOCA4LTMuNiA4LTggOHptMS00aDJWNmgtMnY4eiIvPg0KPC9zdmc+');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    transition: opacity 300ms;
+    cursor: pointer;
+}
+
+.play-stream:hover {
+    opacity: 0.8;
+}
+
+.play-stream_disabled {
+    background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMCIgaGVpZ2h0PSIyMCIgdmlld0JveD0iMCAwIDIwIDIwIj4NCiAgPHBhdGggaWQ9InBsYXkiIGZpbGw9IiMzMTljZTEiIGZpbGwtcnVsZT0iZXZlbm9kZCIgZD0iTTggMTQuNWw2LTQuNS02LTQuNXY5ek0xMCAwQzQuNSAwIDAgNC41IDAgMTBzNC41IDEwIDEwIDEwIDEwLTQuNSAxMC0xMFMxNS41IDAgMTAgMHptMCAxOGMtNC40IDAtOC0zLjYtOC04czMuNi04IDgtOCA4IDMuNiA4IDgtMy42IDgtOCA4eiIvPg0KPC9zdmc+');
+}
+
+.timer {
+  vertical-align: -1px;
+}
+
+.stream {
+  display: none;
+}
+
+.volume {
+  cursor: pointer;
+}
+
+.volume__inner {
+  box-sizing: content-box;
+  height: 2px;
+  margin-top: 2px;
+  margin-bottom: -2px;
+  
+  border-top: 3px solid #fff;
+  border-bottom: 2px solid #fff;
+  background: rgba(23, 134, 206, 0.66);
+  
+  transition: width 300ms;
+}
